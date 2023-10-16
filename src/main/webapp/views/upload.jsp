@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: hoanganhvu
+  Date: 13/10/2023
+  Time: 14:16
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
@@ -25,7 +32,7 @@
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/upload">Upload Image</a>
+                    <a class="nav-link" href="#">Customer 1</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -52,8 +59,30 @@
 <%--End Nav--%>
 <div class="container">
     <div class="row">
-        <div class="col-lg-12">
-            <h1>HELLO MATHER F*****</h1>
+        <div class="col-lg-3">
+            <h2>Khu vực sidebars</h2>
+        </div>
+        <div class="col-lg-6">
+            <br>
+<%--            <div class="mb-3">--%>
+<%--                <label for="formGroupExampleInput" class="form-label">Example label</label>--%>
+<%--                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">--%>
+<%--            </div>--%>
+<%--            <div class="mb-3">--%>
+<%--                <label for="formGroupExampleInput2" class="form-label">Another label</label>--%>
+<%--                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">--%>
+<%--            </div>--%>
+<%--            <div class="mb-3">--%>
+<%--                <label for="formGroupExampleInput3" class="form-label">Example label</label>--%>
+<%--                <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="Example input placeholder">--%>
+<%--            </div>--%>
+            <div class="mb-3" action="/upload" method="POST" enctype = "multipart/form-data">
+                <label for="formFile" class="form-label"><b>CHO TAU CÁI ẢNH</b></label>
+                <input name="photo" class="form-control" type="file" id="formFile">
+                <br>
+                <button type="button" class="btn btn-success">Upload</button>
+            </div>
+
         </div>
     </div>
     <%--Form--%>
