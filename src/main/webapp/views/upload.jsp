@@ -11,6 +11,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; ">
+
+
     <title>JSP Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
@@ -32,7 +35,7 @@
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Customer 1</a>
+                    <a class="nav-link" href="/views/Result.jsp">Ket Qua Upload</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -76,12 +79,15 @@
 <%--                <label for="formGroupExampleInput3" class="form-label">Example label</label>--%>
 <%--                <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="Example input placeholder">--%>
 <%--            </div>--%>
-            <div class="mb-3" action="/upload" method="POST" enctype = "multipart/form-data">
-                <label for="formFile" class="form-label"><b>CHO TAU CÁI ẢNH</b></label>
-                <input name="photo" class="form-control" type="file" id="formFile">
+            <form class="mb-3" action="upload" method="post" enctype = "multipart/form-data">
+                <label  class="form-label"><b>CHO TAU CÁI ẢNH</b></label>
+                <input  class="form-control" type="file"  name="image"/>
+                <label  class="form-label"><b>TÀI LIỆU</b></label>
+                <input  class="form-control" type="file"  name="document"/>
                 <br>
-                <button type="button" class="btn btn-success">Upload</button>
-            </div>
+                <button type="submit" class="btn btn-success">Upload</button>
+            </form>
+            <h1>${ketqua}</h1>
 
         </div>
     </div>
